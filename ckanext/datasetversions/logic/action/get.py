@@ -1,5 +1,5 @@
 from ckan.plugins import toolkit
-
+import logging
 import ckan.logic as logic
 from ckan.logic.action.get import package_show as ckan_package_show
 
@@ -10,6 +10,8 @@ from ckanext.datasetversions.helpers import get_context
 def package_show(context, data_dict):
     class DatasetType:
         (specific_version, latest_version, unversioned) = range(3)
+
+    #logging.warning('DATASETVERSIONS PACKAGE_SHOW')
 
     # The parent dataset is private so it doesn't appear in the lists
     # but we want to override the authentication checks so we can

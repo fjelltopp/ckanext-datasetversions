@@ -17,8 +17,8 @@ class DatasetversionsPlugin(plugins.SingletonPlugin):
         return {
             'ckan_package_show':
             ckanext.datasetversions.logic.action.get.ckan_package_show,
-            'package_show':
-            ckanext.datasetversions.logic.action.get.package_show,
+            #'package_show':
+            #ckanext.datasetversions.logic.action.get.package_show,
             'dataset_version_create':
             ckanext.datasetversions.logic.action.create.dataset_version_create,
         }
